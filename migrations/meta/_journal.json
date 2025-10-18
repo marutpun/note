@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1760766837360,
+      "tag": "0000_melodic_prodigy",
+      "breakpoints": true
+    }
+  ]
+}
