@@ -21,6 +21,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Controller, useForm, type SubmitHandler } from 'react-hook-form';
 
 import { useFetcher, useRouteLoaderData } from 'react-router';
+import { timeAgo } from '@/utils';
 
 export default function EditNote({ noteId }: { noteId: number }) {
   const routeLoaderData = useRouteLoaderData('app');
@@ -66,7 +67,7 @@ export default function EditNote({ noteId }: { noteId: number }) {
         <DialogHeader>
           <DialogTitle>Edit note</DialogTitle>
           <DialogDescription>This action cannot be undone.</DialogDescription>
-          <DialogDescription>Last updated: {new Date(note.updatedAt * 1000).toString()}</DialogDescription>
+          <DialogDescription>Last updated: {timeAgo(note.updatedAt)}</DialogDescription>
         </DialogHeader>
         <fetcher.Form onSubmit={form.handleSubmit(_handleSubmitForm)} method="POST" className="space-y-4">
           <FieldGroup>
