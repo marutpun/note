@@ -63,7 +63,7 @@ export default function EditNote({ noteId }: { noteId: number }) {
           <Pencil className="size-4" />
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="overflow-y-scroll max-h-screen">
         <DialogHeader>
           <DialogTitle>Edit note</DialogTitle>
           <DialogDescription>This action cannot be undone.</DialogDescription>
